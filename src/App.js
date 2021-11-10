@@ -1,22 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { CourierProvider } from "@trycourier/react-provider";
+import { Toast } from "@trycourier/react-toast";
+import { Inbox } from "@trycourier/react-inbox";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <CourierProvider
+          clientKey={"YTk4MGVmNWUtMWMzMS00OTQxLWI4Y2MtZDA0ZDViNDM3ZmU2"}
+          userId={"courier-333"}
         >
-          Learn React
-        </a>
+          <Toast />
+        </CourierProvider>
       </header>
     </div>
   );
